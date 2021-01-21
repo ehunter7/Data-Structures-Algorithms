@@ -1,30 +1,36 @@
 #include <iostream>
-#include "Person.h"
+#include <string>
+#include "person.h"
 
 using namespace std;
 void getPeople(Person people[]);
 void printPeople(Person people[]);
 
 int main() {
+
     Person people[5];
+
     getPeople(people);
     printPeople(people);
+
     return 0;
 }
 
 void getPeople(Person people[]){
-    string tmp;
+    string fName;
+    string lName;
+    string address;
     for(int x = 0; x < 5; x++){
-        people[x] = new Person();
+
         cout << "Enter first name" << endl;
-        cin >> tmp;
-        people[x].setFirstName(tmp);
+        getline(cin, fName);
+        people[x].setFirstName(fName);
         cout << "Enter last name" << endl;
-        cin >> tmp;
-        people[x].setLastName(tmp);
+        getline(cin, lName);
+        people[x].setLastName(lName);
         cout << "Enter address" << endl;
-        cin >> tmp;
-        people[x].setAddress(tmp);
+        getline(cin, address);
+        people[x].setAddress(address);
     }
 }
 
@@ -32,7 +38,7 @@ void printPeople(Person people[]){
     for(int x = 0; x < 5; x++){
         cout << people[x].getFirstName() << " " << people[x].getLasName()
         << endl;
-        cout << people[x].getAddress() << endl << endl;
+        cout << people[x].getAddress() << endl;
         cout << "----------------------------------------\n";
     }
 }

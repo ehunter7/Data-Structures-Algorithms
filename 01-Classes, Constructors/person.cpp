@@ -6,10 +6,10 @@
 
 //Constructors
 Person::Person()
-: Person("","",""){}
+        : Person("","",""){}
 
 Person::Person(string first, string last)
-: Person(first, last, ""){}
+        : Person(first, last, ""){}
 
 Person::Person(string first, string last, string address){
     this->setFirstName(first);
