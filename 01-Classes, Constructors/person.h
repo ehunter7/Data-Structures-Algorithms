@@ -9,20 +9,21 @@ using std::string;
 
 class Person {
 private:
-    string firstName;
-    string lastName;
-    string address;
+    string mFirstName;
+    string mLastName;
+    string mAddress;
+
 public:
 
     //Constructors
     Person();
-    Person(string first, string last);
-    Person(string first, string last, string address);
+    Person(string const &first, string const &last);
+    Person(string const &first, string const &last, string const &address);
 
     //Mutators
-    void setFirstName(string first);
-    void setLastName(string last);
-    void setAddress(string address);
+    void setFirstName(string const &first);
+    void setLastName(string const &last);
+    void setAddress(string const &address);
 
     //Accessors
     string getFirstName() const;
