@@ -1,14 +1,25 @@
-//
-// Created by ehunt on 1/20/2021.
-//
+// ##################################################
+// File: person.h
+// Author: Eric Hunter
+// Date: Jan 23, 2021
+// Description: Person class header file. Person class has three constructors,
+//              working constructor take a first name, last name, and address.
+//              Mutators set the first name, last name, and address.
+//              Accessors retrieve first name, last name, and address.
+// ##################################################
 
 #ifndef DATA_STRUCTURES_ALGORITHMS_PERSON_H
 #define DATA_STRUCTURES_ALGORITHMS_PERSON_H
+
 #include <string>
+
 using std::string;
 
 class Person {
+
 private:
+
+    //Class attributes
     string mFirstName;
     string mLastName;
     string mAddress;
@@ -29,8 +40,6 @@ public:
     string getFirstName() const;
     string getLasName() const;
     string getAddress() const;
-
 };
-
 
 #endif //DATA_STRUCTURES_ALGORITHMS_PERSON_H
