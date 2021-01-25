@@ -27,9 +27,11 @@ private:
 public:
 
     //Constructors
-    Person();
-    Person(string const &first, string const &last);
     Person(string const &first, string const &last, string const &address);
+    Person(string const &first, string const &last);
+    Person();
+
+
 
     //Mutators
     void setFirstName(string const &first);

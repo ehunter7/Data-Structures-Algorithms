@@ -7,37 +7,34 @@
 
 #include "person.h"
 
-
-//Constructors
-Person::Person()
-        : Person("", "", "") {}
-
-
-Person::Person(string const &first, string const &last)
-        : Person(first, last, "") {}
-
-
 //working constructor
 Person::Person(string const &first, string const &last, string const &address) {
-    this->setFirstName(first);
-    this->setLastName(last);
-    this->setAddress(address);
+    setFirstName(first);
+    setLastName(last);
+    setAddress(address);
 }
+
+
+//Constructors
+Person::Person(string const &first, string const &last) : Person(first, last, "") {}
+
+
+Person::Person() : Person("", "", "") {}
 
 
 //Mutators
 void Person::setFirstName(string const &first) {
-    this->mFirstName = first;
+    mFirstName = first;
 }
 
 
 void Person::setLastName(string const &last) {
-    this->mLastName = last;
+    mLastName = last;
 }
 
 
 void Person::setAddress(string const &address) {
-    this->mAddress = address;
+    mAddress = address;
 }
 
 

@@ -21,11 +21,12 @@ void printPeople(Person people[], size_t length_of_array);
 
 int main() {
 
-    int const kNumberOfPeople = 5;
+    int const kNumberOfPeople = 2;
 
     Person people[kNumberOfPeople];
 
     getPeople(people, kNumberOfPeople);
+    cout << endl;
     printPeople(people, kNumberOfPeople);
 
     return 0;
@@ -49,30 +50,25 @@ int main() {
 // ################################################################
 void getPeople(Person people[], size_t length_of_array) {
 
-    string shuttle;
-
     for (int i{0}; i < length_of_array; ++i) {
+
+        string shuttle;
+        Person &person = people[i];
 
         //Get first name
         cout << "Enter first name" << endl;
         getline(cin, shuttle);
-        people[i].setFirstName(move(shuttle));
-
-        cout << endl;
+        person.setFirstName(shuttle);
 
         //Get last name
         cout << "Enter last name" << endl;
         getline(cin, shuttle);
-        people[i].setLastName(move(shuttle));
-
-        cout << endl;
+        person.setLastName(shuttle);
 
         //get address
         cout << "Enter address" << endl;
         getline(cin, shuttle);
-        people[i].setAddress(move(shuttle));
-
-        cout << endl;
+        person.setAddress(shuttle);
     }
 }
 
@@ -93,13 +89,14 @@ void getPeople(Person people[], size_t length_of_array) {
 // ################################################################
 void printPeople(Person people[], size_t length_of_array) {
 
-    cout << endl;
     for (int i{0}; i < length_of_array; ++i) {
 
-        cout << people[i].getFirstName() << " " << people[i].getLasName()
+    Person &person = people[i];
+
+        cout << person.getFirstName() << " " << person.getLasName()
              << endl;
 
-        cout << people[i].getAddress() << endl;
+        cout << person.getAddress() << endl;
 
         cout << "----------------------------------------\n";
     }
