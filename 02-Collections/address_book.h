@@ -9,9 +9,10 @@
 
 class AddressBook {
 private:
+
     std::vector <Person> mContact;
 
-    //TODO add static index variable to hold position in address book
+    std::vector <Person>::iterator mCurrentContact = mContact.begin();
 
 public:
 
