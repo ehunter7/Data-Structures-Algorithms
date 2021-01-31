@@ -1,18 +1,24 @@
-//
-// Created by ehunt on 1/27/2021.
-//
+// ##################################################
+// File: address_book.h
+// Author: Eric Hunter
+// Date: Jan 30, 2021
+// Description: Contains AddressBook class and declares its functions and variables.
+// ##################################################
 
 #ifndef INC_02_COLLECTIONS_ADDRESS_BOOK_H
 #define INC_02_COLLECTIONS_ADDRESS_BOOK_H
+
 #include <vector>
+#include <iterator>
 #include "Person.h"
 
 class AddressBook {
+
 private:
 
-    std::vector <Person> mContact;
+    std::vector<Person> mContact;
 
-    std::vector <Person>::iterator mCurrentContact = mContact.begin();
+    std::vector<Person>::iterator mpCurrentContact;
 
 public:
 
@@ -26,11 +32,10 @@ public:
     void setPerson(string const &first, string const &last, string const &address);
 
     //Accessors
-    //TODO look into asterisk in front of methods names
-    //TODO Need to make const
-    Person *getPerson();
-    Person *findPerson(string const &last);
-    Person *findPerson(string const &first, string const &last);
+
+    Person const *getPerson();
+    Person const *findPerson(string const &last);
+    Person const *findPerson(string const &first, string const &last);
     void print();
 
 };
