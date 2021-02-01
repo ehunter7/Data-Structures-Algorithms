@@ -3,11 +3,6 @@
 // Author: Eric Hunter
 // Date: Jan 30, 2021
 // Description: Functions for the AddressBook class.
-//      GetPerson, and both findPerson functions are only returning
-//      addresses and not the Person. I was unable to get this to work
-//      and I am disappointed with the quality of my work. I will
-//      continue strive for better and will allot more time to work
-//      on these projects.
 // ##################################################
 
 #include <iostream>
